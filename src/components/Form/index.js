@@ -6,14 +6,12 @@ import React, { useState } from "react";
 // # Import Component Style
 import styles from "./FormInput.module.css"
 
-
 export default function FormInput(props) {
   const [focused, setFocused] = useState(false);
   const {
     label,
     errorMessage,
     onChange,
-    onKeyDown,
     id,
     placeholder,
     disabled,
@@ -31,7 +29,7 @@ export default function FormInput(props) {
   if (inputProps.type === "select") {
     return (
         <div className={styles.formInput__container}>
-        <label className="label-input-component">{placeholder}</label>
+        <label className={styles.label__input}>{placeholder}</label>
         <select
           {...inputProps}
           onChange={(e) => onChange(e)}
@@ -53,7 +51,7 @@ export default function FormInput(props) {
   } else if (inputProps.type === "textarea" ) {
     return (
       <div className={styles.formInput__container}>
-        <label className="label-input-component">{label}</label>
+        <label className={styles.label__input}>{label}</label>
         <textarea
           {...inputProps}
           onChange={onChange}
@@ -70,7 +68,7 @@ export default function FormInput(props) {
   } else {
     return (
         <div className={styles.formInput__container}>
-        <label className="label-input-component">{label}</label>
+        <label className={styles.label__input}>{label}</label>
         <input
           {...inputProps}
           onChange={onChange}
@@ -79,7 +77,6 @@ export default function FormInput(props) {
           placeholder={placeholder}
           disabled={disabled}
           pattern={pattern}
-          onKeyDown={ onKeyDown? onKeyDown: ""}
           required
           className="input-component"
         />
