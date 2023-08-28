@@ -78,9 +78,9 @@ export default function FormInput(props) {
           disabled={disabled}
           pattern={pattern}
           required
-          className="input-component"
+          className={styles.input__component}
         />
-        <p className="p-input-component">{errorMessage}</p>
+        <p className={styles.p_input__component}>{errorMessage}</p>
       </div>
     );
   }

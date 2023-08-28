@@ -32,6 +32,7 @@ export default function Login() {
       disabled: false,
       label: "Email",
       required: true,
+      errorMessage: "Esse campo é obrigatório"
     },
     {
       id: 2,
@@ -41,6 +42,7 @@ export default function Login() {
       disabled: false,
       label: "Senha",
       required: true,
+      errorMessage: "Esse campo é obrigatório"
     },
   ];
   return (

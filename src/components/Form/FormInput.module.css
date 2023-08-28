@@ -15,4 +15,20 @@ input[type="password"] {
  font-size: 20px;
 }
 
+.p_input__component {
+  font-size: 0.75rem;
+  padding: 0.18%;
+  color: red;
+  display: none;
+}
+
+.input__component:invalid[focused="true"] {
+  border: 0.0625rem solid red;
+}
+
+.input__component:invalid[focused="true"] ~ p {
+  display: block;
+  line-height: 1.5;
+}
+
 
