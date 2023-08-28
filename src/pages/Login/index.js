@@ -63,6 +63,7 @@ export default function Login() {
             className={styles.bttn__login}
             type="submit"
             onClick={handleSubmit}
+            disabled={values.email && values.password ? false : true}
           >
             <p className={styles.text__enter}>Entrar</p>
           </button>
