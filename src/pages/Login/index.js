@@ -1,30 +1,23 @@
 // Main import
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { BiFoodMenu } from "react-icons/bi";
 
 //Style - Login
 import styles from "./Login.module.css";
 
+// Components
 import FormInput from "../../components/Form";
+import Footer from "../../components/Footer";
 
 export default function Login() {
-  /*   const history = useHistory() */
+  let navigate = useNavigate();
   const [values, setValues] = useState({});
-  async function handleSubmit() {
-    try {
-   /*    await Login(values.user, values.password); */
-      /*     history.push(`/home`); */
-      window.location.reload(true);
-    } catch (error) {
-      console.log(error.message);
-      // Toast
-    }
+
+  function handleSubmit() {
+    navigate("home");
   }
 
-  function handleKeyDown(e) {
-    if (e.key === "Enter") {
-      handleSubmit();
-    }
-  }
 
   function onChange(e) {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -48,13 +41,16 @@ export default function Login() {
       disabled: false,
       label: "Senha",
       required: true,
-      onKeyDown: handleKeyDown,
     },
   ];
   return (
     <div className={styles.login__container}>
       <section>
         <form className={styles.form__container}>
+          <h2 className={styles.title__login}>
+            My Recipes <BiFoodMenu />{" "}
+          </h2>
+
           {firstInputSection.map((input) => (
             <FormInput
               key={input.id}
@@ -63,8 +59,16 @@ export default function Login() {
               onChange={onChange}
             />
           ))}
+          <button
+            className={styles.bttn__login}
+            type="submit"
+            onClick={handleSubmit}
+          >
+            <p className={styles.text__enter}>Entrar</p>
+          </button>
         </form>
       </section>
+      <Footer />
     </div>
   );
 }
