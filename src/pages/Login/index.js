@@ -12,7 +12,10 @@ import Footer from "../../components/Footer";
 
 export default function Login() {
   let navigate = useNavigate();
+
+
   const [values, setValues] = useState({});
+
 
   function handleSubmit() {
     navigate("home");
@@ -50,7 +53,7 @@ export default function Login() {
       <section>
         <form className={styles.form__container}>
           <h2 className={styles.title__login}>
-            My Recipes <BiFoodMenu />{" "}
+            My Recipes <BiFoodMenu />
           </h2>
 
           {firstInputSection.map((input) => (
