@@ -1,0 +1,15 @@
+.bttn__category {
+    border: none;
+    border-radius: 50% 20% / 10% 40%;
+    background-color: #ECD71B;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.bttn__category:hover{
+    color: #ffff;
+    border-radius: 10px 100px / 120px;
+}
