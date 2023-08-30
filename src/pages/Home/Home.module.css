@@ -3,3 +3,8 @@
     padding: 3%;
     justify-content: space-around;
 }
+.section_food__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
