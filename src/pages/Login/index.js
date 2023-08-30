@@ -1,5 +1,5 @@
 // Main import
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { BiFoodMenu } from "react-icons/bi";
 
@@ -10,17 +10,20 @@ import styles from "./Login.module.css";
 import FormInput from "../../components/Form";
 import Footer from "../../components/Footer";
 
+// Contexts
+import UserContext from "../../contexts/UserContext";
+
 export default function Login() {
   let navigate = useNavigate();
 
+  const { setUser } = useContext(UserContext);
 
   const [values, setValues] = useState({});
 
-
   function handleSubmit() {
     navigate("home");
+    setUser(values.email);
   }
-
 
   function onChange(e) {
     setValues({ ...values, [e.target.name]: e.target.value });
@@ -35,7 +38,7 @@ export default function Login() {
       disabled: false,
       label: "Email",
       required: true,
-      errorMessage: "Esse campo é obrigatório"
+      errorMessage: "Esse campo é obrigatório",
     },
     {
       id: 2,
@@ -45,7 +48,7 @@ export default function Login() {
       disabled: false,
       label: "Senha",
       required: true,
-      errorMessage: "Esse campo é obrigatório"
+      errorMessage: "Esse campo é obrigatório",
     },
   ];
   return (
