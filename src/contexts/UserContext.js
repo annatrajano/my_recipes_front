@@ -1,27 +1,15 @@
-import React, { createContext,  useState } from 'react';
+import React, { createContext, useState } from "react";
 
-// Create Context Object
-const UserNameContext = createContext();
+const UserContext = createContext();
 
-// Hook
-export default function UserName() {
-  // UserName states
-  const [userName, setUserName] = useState("");
-    
-  return { userName, setUserName};
-}
-
-// Specific Context Provider
-function UserNameProvider({ children }) {
-
-  const { userName, setUserName } = UserName();
-
+const UserContextProvider = ({ children }) => {
+  const [user, setUser] = useState("");
   return (
-    <UserNameContext.Provider value={{ userName, setUserName }}>
+    <UserContext.Provider value={{ user, setUser }}>
       {children}
-    </UserNameContext.Provider>
+    </UserContext.Provider>
   );
-}
+};
 
-
-export { UserNameContext, UserNameProvider };
+export { UserContextProvider };
+export default UserContext;
