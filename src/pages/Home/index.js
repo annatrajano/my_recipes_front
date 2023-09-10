@@ -30,8 +30,7 @@ export default function Home() {
 
   async function handleClick(category) {
     const response = await getAllFoodsByCategory(category);
-    setRecipes(response.meals.splice(0, 20));
-    console.log(response.meals.splice(0, 20));
+    setRecipes(response);
   }
 
   const buttons = [

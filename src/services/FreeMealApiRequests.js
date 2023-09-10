@@ -6,7 +6,7 @@ import axios from "./apis/FreMealApi";
 async function getAllFoodsByCategory(category) {
   try {
     const response = await axios.get(`filter.php?c=${category}`);
-    return response.data;
+    return response.data.meals.splice(0, 20);
   } catch (error) {
     console.log(error.message);
   }
