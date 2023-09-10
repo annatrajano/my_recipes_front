@@ -5,6 +5,8 @@
 }
 .section_food__container{
     display: flex;
+    gap: 40px;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 1% 4%;
 }
