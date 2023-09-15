@@ -1,0 +1,48 @@
+.card__container {
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.card__container:hover {
+  box-shadow: #fdb359 0px 7px 29px 0px;
+}
+
+.card__title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.card__item {
+  display: inline;
+  font-weight: bold;
+}
+.card__name {
+  line-height: 2;
+  text-align: justify;
+}
+
+.bttn__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.delete__bttn, .update__bttn {
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1%;
+    padding: 8px;
+}
+
+.delete__bttn{
+    background-color: red;
+    margin-right: 1%;
+}
+
+.update__bttn{
+    background-color: rgb(0, 174, 255);
+}
