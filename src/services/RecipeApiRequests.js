@@ -28,7 +28,8 @@ async function createRecipe(data) {
 // DELETE Method Request by Recipe Id
 async function deleteRecipeById(id) {
   try {
-    const response = await axios.delete(`/recipe/${id}/`);
+    const response = await axios.delete(`/recipe/${id}`);
+    console.log(response)
     return response.data;
   } catch (error) {
     console.log("Não foi possivel deletar esse caso!");
