@@ -1,5 +1,8 @@
 // Main import
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+// Icons
 import {
   GiCirclingFish,
   GiHotMeal,
@@ -12,25 +15,41 @@ import { MdMenuBook } from "react-icons/md";
 // Components
 import Header from "../../components/Header";
 import Button from "../../components/Button";
+import Card from "../../components/Cards";
+import RecipesCard from "../../components/RecipesCard";
 
 // Requests
 import { getAllFoodsByCategory } from "../../services/FreeMealApiRequests";
+import { getAllRecipes, deleteRecipeById } from "../../services/RecipeApiRequests";
 
 // Contexts
 import UserContext from "../../contexts/UserContext";
 
 // Styles - Home
 import styles from "./Home.module.css";
-import Card from "../../components/Cards";
+
 
 export default function Home() {
+  
   const [recipes, setRecipes] = useState([]);
 
   const { user } = useContext(UserContext);
 
   async function handleClick(category) {
-    const response = await getAllFoodsByCategory(category);
-    setRecipes(response);
+    if (category === "My recipes") {
+      const response = await getAllRecipes();
+      setRecipes(response);
+    } else {
+      const response = await getAllFoodsByCategory(category);
+      setRecipes(response);
+    }
+  }
+
+  async function deleteRecipe(id) {
+    await deleteRecipeById(id)
+    const allRecipes = await getAllRecipes()
+    setRecipes(allRecipes)
+    
   }
 
   const buttons = [
@@ -84,8 +103,10 @@ export default function Home() {
       <section className={styles.section_food__container}>
         {recipes.length > 0 ? (
           recipes.map((item) => {
-            return (
+            return item.strMeal ? (
               <Card strMeal={item.strMeal} strMealThumb={item.strMealThumb} />
+            ) : (
+              <RecipesCard id={item.id} name={item.name} typ={item.typ} ingredients={item.ingredients} description={item.description} deleteRecipe={deleteRecipe}/>
             );
           })
         ) : (

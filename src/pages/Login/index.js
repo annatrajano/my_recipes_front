@@ -8,7 +8,6 @@ import styles from "./Login.module.css";
 
 // Components
 import FormInput from "../../components/Form";
-import Footer from "../../components/Footer";
 
 // Contexts
 import UserContext from "../../contexts/UserContext";
@@ -77,7 +76,6 @@ export default function Login() {
           </button>
         </form>
       </section>
-      <Footer />
     </div>
   );
 }
