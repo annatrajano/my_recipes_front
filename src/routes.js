@@ -6,6 +6,9 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import NewRecipe from "./pages/NewRecipe";
 
+// Components
+import Footer from "./components/Footer";
+
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -14,6 +17,7 @@ function AppRoutes() {
         <Route path="/home" element={<Home />} />
         <Route path="/new-recipe" element={<NewRecipe />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
