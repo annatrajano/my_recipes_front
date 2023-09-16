@@ -30,11 +30,18 @@ import styles from "./Home.module.css";
 
 
 export default function Home() {
-  
+
   const [recipes, setRecipes] = useState([]);
 
   const { user } = useContext(UserContext);
 
+  const navigate = useNavigate()
+
+  function redirectToLoginPage(){
+    navigate('/')
+  }
+
+  // Function responsible for select recipe by category
   async function handleClick(category) {
     if (category === "My recipes") {
       const response = await getAllRecipes();
@@ -45,6 +52,7 @@ export default function Home() {
     }
   }
 
+  // Function responsible for delete recipe by id
   async function deleteRecipe(id) {
     await deleteRecipeById(id)
     const allRecipes = await getAllRecipes()
@@ -92,7 +100,7 @@ export default function Home() {
 
   return (
     <>
-      <Header userName={user} />
+      <Header userName={user} redirectToLoginPage={redirectToLoginPage} />
       <section className={styles.section__container}>
         {buttons.map((item) => {
           return (

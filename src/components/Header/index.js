@@ -5,10 +5,10 @@ import { BiFoodMenu } from "react-icons/bi";
 //  Styles - Header
 import styles from "./Header.module.css";
 
-export default function Header({ userName }) {
+export default function Header({ userName, redirectToLoginPage }) {
   return (
     <header className={styles.header__container}>
-      <h1 className={styles.title__home}>
+      <h1 className={styles.title__home} onClick={() => redirectToLoginPage()}>
         My Recipes <BiFoodMenu />{" "}
       </h1>
       <h2 className={styles.username__text}>{userName}</h2>
