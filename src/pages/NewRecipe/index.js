@@ -24,6 +24,7 @@ export default function NewRecipe() {
 
   async function handleSubmit() {
     await createRecipe(values);
+    navigate("/home")
   }
 
   function redirectToLoginPage() {
