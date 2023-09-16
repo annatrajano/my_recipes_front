@@ -1,0 +1,53 @@
+.new_recipe__container {
+  align-items: center;
+  height: 100%;
+  margin: 8%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 2%;
+  border-radius: 10px;
+
+}
+
+.form__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  width: 100%;
+  
+}
+
+.bttn__container {
+  display: flex;
+  justify-content:space-around;
+}
+
+
+.bttn__create, .bttn__back {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 3%;
+}
+.bttn__create{
+  background: #fdb359;
+  box-shadow: 0px 4px 20px 0px #fdb359;
+  
+}
+
+.bttn__back {
+  background: #e94646;
+  box-shadow: 0px 4px 20px 0px #e94646;
+
+}
+
+.text__bttn{
+  color: #FFF;
+  text-align: center;
+  font-family: Source Sans Pro;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

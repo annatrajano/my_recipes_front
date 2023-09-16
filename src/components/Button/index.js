@@ -2,12 +2,12 @@
 import React from "react";
 
 // Styles - Button
-import styles from "./Button.module.css"
+import styles from "./Button.module.css";
 
-export default function Button({text, onClick, icon}) {
+export default function Button({ text, onClick, icon }) {
   return (
     <button
-     className={styles.bttn__category}
+      className={styles.bttn__category}
       type="button"
       onClick={() => onClick(text)}
     >

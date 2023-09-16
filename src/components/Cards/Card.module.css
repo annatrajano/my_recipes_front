@@ -1,32 +1,31 @@
 .card__container {
-    border-radius: 30px;
-    background: #fdb359;
-    padding: 20px;
-    cursor: pointer;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 30px;
+  background: #fdb359;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .card__container:hover {
-    box-shadow: #419F7D 0px 7px 29px 0px;
+  box-shadow: #419f7d 0px 7px 29px 0px;
 }
 
-
-.card__image{
-    border-radius: 130px;
-    border: 2px solid #419F7D;
-    background: lightgray 50% / cover no-repeat, #D9D9D9;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    width: 300px;
-    height: 300px;
-
+.card__image {
+  border-radius: 130px;
+  border: 2px solid #419f7d;
+  background: lightgray 50% / cover no-repeat, #d9d9d9;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 300px;
+  height: 300px;
 }
 
-.card__name, .card__title{
-    line-height: 1.8;
-    text-align: center;
+.card__name,
+.card__title {
+  line-height: 1.8;
+  text-align: center;
 }
 
 .card__title {
-    font-size: 1.2rem;
-    font-weight: bold;
+  font-size: 1.2rem;
+  font-weight: bold;
 }

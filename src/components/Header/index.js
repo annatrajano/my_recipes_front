@@ -1,5 +1,7 @@
 // Main import
 import React from "react";
+
+// Icons
 import { BiFoodMenu } from "react-icons/bi";
 
 //  Styles - Header

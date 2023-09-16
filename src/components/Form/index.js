@@ -1,10 +1,8 @@
-// FormInput = Component to render form input
-
-// #  Main Imports
+// Main Imports
 import React, { useState } from "react";
 
-// # Import Component Style
-import styles from "./FormInput.module.css"
+// Style
+import styles from "./FormInput.module.css";
 
 export default function FormInput(props) {
   const [focused, setFocused] = useState(false);
@@ -28,7 +26,7 @@ export default function FormInput(props) {
 
   if (inputProps.type === "select") {
     return (
-        <div className={styles.formInput__container}>
+      <div className={styles.formInput__container}>
         <label className={styles.label__input}>{placeholder}</label>
         <select
           {...inputProps}
@@ -48,7 +46,7 @@ export default function FormInput(props) {
         </select>
       </div>
     );
-  } else if (inputProps.type === "textarea" ) {
+  } else if (inputProps.type === "textarea") {
     return (
       <div className={styles.formInput__container}>
         <label className={styles.label__input}>{label}</label>
@@ -67,7 +65,7 @@ export default function FormInput(props) {
     );
   } else {
     return (
-        <div className={styles.formInput__container}>
+      <div className={styles.formInput__container}>
         <label className={styles.label__input}>{label}</label>
         <input
           {...inputProps}
@@ -85,4 +83,3 @@ export default function FormInput(props) {
     );
   }
 }
-
