@@ -1,12 +1,40 @@
 .section__container {
-    display: flex;
-    padding: 3%;
-    justify-content: space-around;
+  display: flex;
+  padding: 3%;
+  justify-content: space-around;
 }
-.section_food__container{
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin: 1% 4%;
+.section_food__container {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 1% 4%;
+}
+
+.section_food_bttn__container {
+  bottom: 30px;
+  position: fixed;
+  left: 48%;
+}
+
+.home_text {
+  font-size: 24px;
+  margin-top: 250px;
+}
+
+.plus_bttn__container {
+  border-radius: 10px;
+  border: none;
+  font-size: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.plus_bttn {
+  color: rgba(243, 8, 8, 0.863);
+  background-color: transparent;
+}
+
+.plus_bttn:hover {
+  box-shadow: #fdb359 0px 7px 29px 0px;
 }

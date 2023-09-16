@@ -11,6 +11,7 @@ import {
 } from "react-icons/gi";
 import { LuBeef, LuVegan } from "react-icons/lu";
 import { MdMenuBook } from "react-icons/md";
+import { AiFillPlusCircle } from "react-icons/ai";
 
 // Components
 import Header from "../../components/Header";
@@ -20,7 +21,10 @@ import RecipesCard from "../../components/RecipesCard";
 
 // Requests
 import { getAllFoodsByCategory } from "../../services/FreeMealApiRequests";
-import { getAllRecipes, deleteRecipeById } from "../../services/RecipeApiRequests";
+import {
+  getAllRecipes,
+  deleteRecipeById,
+} from "../../services/RecipeApiRequests";
 
 // Contexts
 import UserContext from "../../contexts/UserContext";
@@ -28,37 +32,12 @@ import UserContext from "../../contexts/UserContext";
 // Styles - Home
 import styles from "./Home.module.css";
 
-
 export default function Home() {
-
   const [recipes, setRecipes] = useState([]);
 
   const { user } = useContext(UserContext);
 
-  const navigate = useNavigate()
-
-  function redirectToLoginPage(){
-    navigate('/')
-  }
-
-  // Function responsible for select recipe by category
-  async function handleClick(category) {
-    if (category === "My recipes") {
-      const response = await getAllRecipes();
-      setRecipes(response);
-    } else {
-      const response = await getAllFoodsByCategory(category);
-      setRecipes(response);
-    }
-  }
-
-  // Function responsible for delete recipe by id
-  async function deleteRecipe(id) {
-    await deleteRecipeById(id)
-    const allRecipes = await getAllRecipes()
-    setRecipes(allRecipes)
-    
-  }
+  const navigate = useNavigate();
 
   const buttons = [
     {
@@ -98,6 +77,32 @@ export default function Home() {
     },
   ];
 
+  function redirectToLoginPage() {
+    navigate("/");
+  }
+
+  function redirectToNewRecipePage() {
+    navigate("/new-recipe");
+  }
+
+  // Function responsible for select Recipe by category
+  async function handleClick(category) {
+    if (category === "My recipes") {
+      const response = await getAllRecipes();
+      setRecipes(response);
+    } else {
+      const response = await getAllFoodsByCategory(category);
+      setRecipes(response);
+    }
+  }
+
+  // Function responsible for delete recipe by id
+  async function deleteRecipe(id) {
+    await deleteRecipeById(id);
+    const allRecipes = await getAllRecipes();
+    setRecipes(allRecipes);
+  }
+
   return (
     <>
       <Header userName={user} redirectToLoginPage={redirectToLoginPage} />
@@ -108,21 +113,37 @@ export default function Home() {
           );
         })}
       </section>
+
       <section className={styles.section_food__container}>
         {recipes.length > 0 ? (
           recipes.map((item) => {
             return item.strMeal ? (
               <Card strMeal={item.strMeal} strMealThumb={item.strMealThumb} />
             ) : (
-              <RecipesCard id={item.id} name={item.name} typ={item.typ} ingredients={item.ingredients} description={item.description} deleteRecipe={deleteRecipe}/>
+              <RecipesCard
+                id={item.id}
+                name={item.name}
+                typ={item.typ}
+                ingredients={item.ingredients}
+                description={item.description}
+                deleteRecipe={deleteRecipe}
+              />
             );
           })
         ) : (
-          <h2>
-            Clique no + para adicionar uma nova receita ou selecione as
+          <h2 className={styles.home_text}>
+            Clique no botão + para adicionar uma nova receita ou selecione as
             categorias
           </h2>
         )}
+      </section>
+      <section className={styles.section_food_bttn__container}>
+        <button className={styles.plus_bttn__container}>
+          <AiFillPlusCircle
+            className={styles.plus_bttn}
+            onClick={() => redirectToNewRecipePage()}
+          />
+        </button>
       </section>
     </>
   );
