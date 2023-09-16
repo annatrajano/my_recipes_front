@@ -19,17 +19,16 @@ async function createRecipe(data) {
       `/recipe`,
       JSON.stringify(data),
     );
-    return response.data;
+    return response;
   } catch (error) {
     console.log(error.message);
   }
 }
 
-// DELETE Method Request by Recipe Id
+// DELETE Method Request Recipe by Id
 async function deleteRecipeById(id) {
   try {
     const response = await axios.delete(`/recipe/${id}`);
-    console.log(response)
     return response.data;
   } catch (error) {
     console.log("Não foi possivel deletar esse caso!");
