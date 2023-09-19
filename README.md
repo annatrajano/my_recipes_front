@@ -41,7 +41,7 @@ Após cada um dos passos, haverá um exemplo do comando a ser digitado para faze
 2. Entre no diretório que acabou de criar e depois clone o projeto:
 ```javascript
   cd projetos
-  git clone git@github.com:annabiatrajano/my_recipes_front.git
+  git clone git@github.com:annatrajano/my_recipes_front.git
 ```
 
 3. Acesse o diretório do projeto e depois utilize o comando **npm i** para instalar todas as dependências necessárias:
