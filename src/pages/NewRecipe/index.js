@@ -119,7 +119,7 @@ export default function NewRecipe() {
               </button>
               <button
                 className={styles.bttn__back}
-                type="submit"
+                type="button"
                 onClick={() => redirectToHomePage()}
               >
                 <p className={styles.text__bttn}>Voltar à página inicial</p>
