@@ -12,6 +12,15 @@ async function getAllRecipes() {
   }
 }
 
+// GET Method Request for Recipes By Id
+async function getRecipeById(id) {
+  try {
+    const response = await axios.get(`/recipe/${id}`);
+    return response.data;
+  } catch (error) {
+    console.log("Não foi possivel deletar esse caso!");
+  }
+}
 // POST Method Request for Recipe
 async function createRecipe(data) {
   try {
@@ -25,6 +34,20 @@ async function createRecipe(data) {
   }
 }
 
+// PUT Method Request for Recipe By Id
+async function updateRecipeById(data, id) {
+  try {
+    const response = await axios.put(
+      `/recipe/${id}`,
+      JSON.stringify(data),
+    );
+    return response;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
+
 // DELETE Method Request Recipe by Id
 async function deleteRecipeById(id) {
   try {
@@ -35,4 +58,4 @@ async function deleteRecipeById(id) {
   }
 }
 
-export {getAllRecipes, createRecipe, deleteRecipeById}
+export {getAllRecipes, getRecipeById, createRecipe, updateRecipeById, deleteRecipeById}
