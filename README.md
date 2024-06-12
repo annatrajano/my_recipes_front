@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+Este projeto contém os requisitos realizados por _[Anna Beatriz Garcia Trajano de Sá](www.linkedin.com/in/anna-beatriz-trajano-de-sá)_ enquanto cursava o curso de Pós-Graduação da PUC-RIO em Engenharia de Software. Ele engloba as disciplinas estudadas na primeira sprint (Desenvolvimento Full Stack Básico) e corresponde à parte Front-end da aplicação.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My Recipes App
 
-## Available Scripts
+Neste projeto desenvolvi um app de receitas, utilizando o que há de mais moderno dentro do ecossistema React: Hooks e Context API!
 
-In the project directory, you can run:
+Nele será possível ver, criar, filtar (por categoria) e deletar receitas!
 
-### `npm start`
+A base de dados foram duas APIs distintas, uma para receitas já existentes e outra de criação própria para poder cadastrá-las em um banco de dados.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Veja o exemplo a seguir do layout do projeto!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Layout
 
-### `npm test`
+Login Page             
+:-------------------------:|
+![Screeshot](./public/images/login.png)  |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Home Page           |  Recipe Category Page
+:-------------------------:|:-------------------------:
+![Screeshot](./public/images/home.png)  |  ![Screenshot](./public/images/cat1.png)
 
-### `npm run build`
+Recipe Category Page          |  Form Page
+:-------------------------:|:-------------------------:
+![Screeshot](./public/images/cat2.png)  |  ![Screenshot](./public/images/form.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Recipes          |  
+:-------------------------:|
+![Screeshot](./public/images/recipes.png)  |
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ 
+## Instalação do projeto localmente:
+ 
+Após cada um dos passos, haverá um exemplo do comando a ser digitado para fazer o que está sendo pedido, caso tenha dificuldades e o exemplo não seja suficiente, não hesite em me contatar em _annagarcia@id.uff.br_ 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Abra o terminal e crie um diretório no local de sua preferência com o comando **mkdir**:
+```javascript
+  mkdir projetos
+```
 
-### `npm run eject`
+2. Entre no diretório que acabou de criar e depois clone o projeto:
+```javascript
+  cd projetos
+  git clone git@github.com:annatrajano/my_recipes_front.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Acesse o diretório do projeto e depois utilize o comando **npm i** para instalar todas as dependências necessárias:
+```javascript
+  cd my_recipes_front
+  npm i
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Por último, rode o comando **npm start** e acesse o projeto via browser, no caminho `http://localhost:3000/`.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```javascript
+  npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Habilidades Desenvolvidas
 
-## Learn More
+Neste projeto, desenvolvi as seguintes habilidades:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+ - Componentes reativos e modulares;
+ - Arquivos estáticos;
+ - React Router;
+ - Gerenciamento de estados globais: Context API;
+ - CSS Module;
+ 
+ ## Referências
+ [React](https://legacy.reactjs.org/docs/getting-started.html)<br>
+ [TheMeal DB ](https://www.themealdb.com/api.php)<br>
+ [Documentação oficial do React sobre Context API](https://reactjs.org/docs/context.html)<br>
+ [CSS Module](https://blog.logrocket.com/a-deep-dive-into-css-modules/)<br>
+ [React Icons](https://react-icons.github.io/react-icons/)<br>
+ [Conventional Commits](https://gist.github.com/qoomon/5dfcdf8eec66a051ecd85625518cfd13)<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Escopo do Projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ - Componentes
+ - Tela de Login
+ - Tela principal de receitas
+ - Tela para cadastrar uma nova receita
+ - Tela de receitas cadastradas
