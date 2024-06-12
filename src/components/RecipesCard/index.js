@@ -15,7 +15,7 @@ export default function RecipesCard({
   ingredients,
   description,
   deleteRecipe,
-  updateRecipe,
+  redirectToEditRecipePage,
 }) {
   return (
     <div className={styles.card__container}>
@@ -37,7 +37,7 @@ export default function RecipesCard({
           <RiDeleteBin6Fill />
         </button>
         <button
-          onClick={() => updateRecipe(id)}
+          onClick={() => redirectToEditRecipePage(id)}
           className={styles.update__bttn}
         >
           <AiTwotoneEdit />

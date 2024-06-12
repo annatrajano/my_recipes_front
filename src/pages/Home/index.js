@@ -103,6 +103,11 @@ export default function Home() {
     setRecipes(allRecipes);
   }
 
+// Function responsible for redirect user to EditRecipe Page
+function redirectToEditRecipePage(id) {
+  navigate(`/edit-recipe/${id}`)
+}
+
   return (
     <>
       <Header userName={user} redirectToLoginPage={redirectToLoginPage} />
@@ -127,6 +132,7 @@ export default function Home() {
                 ingredients={item.ingredients}
                 description={item.description}
                 deleteRecipe={deleteRecipe}
+                redirectToEditRecipePage={redirectToEditRecipePage}
               />
             );
           })
