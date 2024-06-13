@@ -1,7 +1,14 @@
+.title_page {
+  font-family: "Pacifico", cursive;
+  margin-top: 3%;
+  font-size: 28px;
+  text-align: center;
+}
+
 .new_recipe__container {
   align-items: center;
   height: 100%;
-  margin: 8%;
+  margin: 5% 8%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 2%;
   border-radius: 10px;

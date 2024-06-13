@@ -102,6 +102,7 @@ export default function EditRecipe() {
   return recipeById && (
     <>
       <Header userName={user} redirectToLoginPage={redirectToLoginPage} />
+      <h1 className={styles.title_page}>Updating a recipe...</h1>
       <div className={styles.new_recipe__container}>
         <section>
           <form className={styles.form__container}>
