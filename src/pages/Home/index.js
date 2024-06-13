@@ -39,40 +39,33 @@ export default function Home() {
 
   const navigate = useNavigate();
 
-  const buttons = [
+  const headerButtons = [
     {
       text: "Seafood",
-      onclik: handleClick,
       icon: <GiCirclingFish />,
     },
     {
       text: "Beef",
-      onclik: handleClick,
       icon: <LuBeef />,
     },
     {
       text: "Pasta",
-      onclik: handleClick,
       icon: <GiHotMeal />,
     },
     {
       text: "Vegan",
-      onclik: handleClick,
       icon: <LuVegan />,
     },
     {
       text: "Vegetarian",
-      onclik: handleClick,
       icon: <GiGreenhouse />,
     },
     {
       text: "Dessert",
-      onclik: handleClick,
       icon: <GiCupcake />,
     },
     {
       text: "My recipes",
-      onclik: handleClick,
       icon: <MdMenuBook />,
     },
   ];
@@ -112,9 +105,9 @@ function redirectToEditRecipePage(id) {
     <>
       <Header userName={user} redirectToLoginPage={redirectToLoginPage} />
       <section className={styles.section__container}>
-        {buttons.map((item) => {
+        {headerButtons.map((item) => {
           return (
-            <Button text={item.text} onClick={item.onclik} icon={item.icon} />
+            <Button text={item.text} onClick={handleClick} icon={item.icon} />
           );
         })}
       </section>
