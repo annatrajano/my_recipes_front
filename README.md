@@ -60,6 +60,16 @@ Após cada um dos passos, haverá um exemplo do comando a ser digitado para faze
   npm start
 ```
 
+## Como executar através do Docker
+ 
+Certifique-se de ter o Docker instalado e em execução em sua máquina.
+
+Navegue até o diretório que contém o arquivo **docker-compose.yml**. Execute como administrador o seguinte comando para construir a imagem Docker e subir o container:
+
+```javascript
+  docker compose up -d
+```
+
 ## Habilidades Desenvolvidas
 
 Neste projeto, desenvolvi as seguintes habilidades:
