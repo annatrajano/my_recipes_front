@@ -20,9 +20,13 @@ Home Page           |  Recipe Category Page
 :-------------------------:|:-------------------------:
 ![Screeshot](./public/images/home.png)  |  ![Screenshot](./public/images/cat1.png)
 
-Recipe Category Page          |  Form Page
+Recipe Category Page          | 
+:-------------------------:|
+![Screeshot](./public/images/cat2.png)  |
+
+Create Recipe          |  Update Recipe
 :-------------------------:|:-------------------------:
-![Screeshot](./public/images/cat2.png)  |  ![Screenshot](./public/images/form.png)
+![Screeshot](./public/images/create-recipe.png)  |  ![Screenshot](./public/images/update-recipe.png)
 
 Recipes          |  
 :-------------------------:|
