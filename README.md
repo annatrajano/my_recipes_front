@@ -108,9 +108,10 @@ Para realizar o cadastro de uma nova receita, sua atualização, exibição e de
 
 Com o intuito de facilitar o entendimento do funcionamento da aplicação como um todo, segue abaixo um fluxograma que exemplefica a arquitetura do projeto e os seus componentes:
 
+![Screeshot](./public/images/software-arq.png) 
 
-
-
+Na imagem acima podemos visualizar os componentes que fazem parte da aplicação. O Frontend, Backend, a API externa (TheMealDB) e ainda um monorepositório composto pelos submódulos do front e do back.
+Para acessar esse repositório clique aqui: [My Recipes - All ](https://github.com/annatrajano/my_recipes_all).
 
 
 ## Habilidades Desenvolvidas
