@@ -1,4 +1,4 @@
-Este projeto contém os requisitos realizados por _[Anna Beatriz Garcia Trajano de Sá](www.linkedin.com/in/anna-beatriz-trajano-de-sá)_ enquanto cursava o curso de Pós-Graduação da PUC-RIO em Engenharia de Software. Ele engloba as disciplinas estudadas na primeira sprint (Desenvolvimento Full Stack Básico) e corresponde à parte Front-end da aplicação.
+Este projeto contém os requisitos realizados por _[Anna Beatriz Garcia Trajano de Sá](www.linkedin.com/in/anna-beatriz-trajano-de-sá)_ enquanto cursava o curso de Pós-Graduação da PUC-RIO em Engenharia de Software. Ele engloba as disciplinas estudadas na primeira sprint (Desenvolvimento Full Stack Básico) e na quarta sprint (Arquitetura de Software) corresponde à parte Front-end da aplicação.
 
 # My Recipes App
 
@@ -35,7 +35,7 @@ Recipes          |
  
 ## Instalação do projeto localmente:
  
-Após cada um dos passos, haverá um exemplo do comando a ser digitado para fazer o que está sendo pedido, caso tenha dificuldades e o exemplo não seja suficiente, não hesite em me contatar em _annagarcia@id.uff.br_ 
+Após cada um dos passos, haverá um exemplo do comando a ser digitado para fazer o que está sendo pedido, caso tenha dificuldades e o exemplo não seja suficiente, não hesite em me contatar em _annatrajano95@gmail.com_ 
 
 1. Abra o terminal e crie um diretório no local de sua preferência com o comando **mkdir**:
 ```javascript
@@ -69,6 +69,49 @@ Navegue até o diretório que contém o arquivo **docker-compose.yml**. Execute,
 ```javascript
   docker compose up -d
 ```
+
+## API Externa
+
+É importante ressaltar que para o desenvolvimento deste projeto uma API externa foi utilizada, a [TheMeal DB ](https://www.themealdb.com/api.php), com o intuito de apresentar algumas receitas
+de acordo com a categoria. Essa é uma API que não necessita de nenhuma licença de uso ou cadastro. A seguinte rota foi utilizada:
+
+```javascript
+ [GET] : www.themealdb.com/api/json/v1/1/filter.php?c=Category
+```
+Sendo que Category pode ser substituido por Seafood, Pasta....
+
+
+## API de Dados
+
+Para realizar o cadastro de uma nova receita, sua atualização, exibição e deleção, uma nova API foi desenvolvida. Caso deseje obter mais informações sobre, basta acessar o seguinte repositório: [My Recipes - API ](https://github.com/annatrajano/my_recipes_api). Todas as rotas implementadas nessa API foram chamadas na aplicação. Sendo elas:
+
+```javascript
+ [GET]: http://localhost:5000/recipes
+```
+
+```javascript
+ [GET]: http://localhost:5000/recipe/{id}
+```
+
+```javascript
+ [POST]: http://localhost:5000/recipe
+```
+
+```javascript
+ [PUT]: http://localhost:5000/recipe/{id}
+```
+
+```javascript
+ [DELETE]: http://localhost:5000/recipe/{id}
+```
+## Arquitetura do Projeto 
+
+Com o intuito de facilitar o entendimento do funcionamento da aplicação como um todo, segue abaixo um fluxograma que exemplefica a arquitetura do projeto e os seus componentes:
+
+
+
+
+
 
 ## Habilidades Desenvolvidas
 
