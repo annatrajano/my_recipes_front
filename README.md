@@ -1,10 +1,12 @@
-Este projeto contém os requisitos realizados por _[Anna Beatriz Garcia Trajano de Sá](www.linkedin.com/in/anna-beatriz-trajano-de-sá)_ enquanto cursava o curso de Pós-Graduação da PUC-RIO em Engenharia de Software. Ele engloba as disciplinas estudadas na primeira sprint (Desenvolvimento Full Stack Básico) e na quarta sprint (Arquitetura de Software) corresponde à parte Front-end da aplicação.
+Este projeto contém os requisitos realizados por _[Anna Beatriz Garcia Trajano de Sá](www.linkedin.com/in/anna-beatriz-trajano-de-sá)_ enquanto cursava o curso de Pós-Graduação da PUC-RIO em Engenharia de Software. Ele engloba as disciplinas estudadas na primeira sprint (Desenvolvimento Full Stack Básico) e na quarta sprint (Arquitetura de Software) 
+
+Esse repositório corresponde à parte Front-end da aplicação.
 
 # My Recipes App
 
 Neste projeto desenvolvi um app de receitas, utilizando o que há de mais moderno dentro do ecossistema React: Hooks e Context API!
 
-Nele será possível ver, criar, filtar (por categoria) e deletar receitas!
+Nele será possível ver, criar, alualizar, filtrar (por categoria) e deletar receitas!
 
 A base de dados foram duas APIs distintas, uma para receitas já existentes e outra de criação própria para poder cadastrá-las em um banco de dados.
 
